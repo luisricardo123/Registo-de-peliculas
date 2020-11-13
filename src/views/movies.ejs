@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <%- include ('partials/header.ejs') %>
+    <!-- MOVIE CSS -->
+    <link rel="stylesheet" href="/movie.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="cont-form">
+            <h1>Registrar película</h1>
+            <form action="/registrar" method="POST"> 
+                <input type="text" name="nombre" id="" placeholder="Nombre" required>
+                <% if(encontrado){ %>
+                <div class="cont-msgMovie">
+                    <p class="msgMovie">La película ya está registrada</p>
+                </div>
+                <% } %>
+                <div>
+                    <button type="submit" class="btn-enviar">Aceptar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

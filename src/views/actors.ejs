@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('partials/header.ejs') %>
+    <title><%= titulo %></title>
+
+    <!-- ACTOR CSS -->
+    <link rel="stylesheet" href="/actor.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="nomPelicula"><%= pelicula %></h1>
+        <div class="cont-form">
+            <h1>Actores</h1>
+            <% if(numActores){ %>
+                <div class="cont-contador">
+                    Cantidad: <input type="number" min="1" class="contador" value="<%= numActores %>">
+                </div>
+            <% }else{ %>
+                <div class="cont-contador">
+                    Cantidad: <input type="number" min="1" value="1" class="contador">
+                </div>
+            <% } %>
+            <form action="/registrarActores/<%= pelicula %>" method="POST">
+                <% if(actores.length){ %>
+                    <% for(let i = 0; i < actores.length; i++){ %>
+                        <input type="text" name="actor" placeholder="Nombre del actor" value = "<%= actores[i].nombre %>" required>
+                        <% if(actores[i].encontrado == false){ %>
+                            <p class="msgActor">El actor no se encuentra</p>
+                        <% } %>
+                    <% } %>
+                <% }else{ %>
+                    <input type="text" name="actor" placeholder="Nombre del actor" required>
+                <% } %>
+                <div>
+                    <button type="submit" class="btn-enviar">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

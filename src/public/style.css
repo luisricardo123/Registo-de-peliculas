@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #444;
+}
+
+.container {
+    /*height: 70vh;*/
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cont-form{
+    background: #fff;
+    width: 30%;
+    /*height: 50vh;*/
+    margin: 10vh auto 100px auto;
+    border-radius: 5px;
+    padding: 3px 0px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+    /*height: 80%;*/
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    outline: none;
+    margin: 13px auto 2px;
+    background: #ddd ;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    border: 2px transparent solid;
+    transition: border, background .4s ease-in-out;
+}
+
+input[type='number']{
+    height: 30px;
+}
+
+input:focus {
+    background: #fff;
+    border: 2px #000 solid;
+}
+
+.btn-enviar {
+    font-family: 'Roboto', sans-serif;
+    background: #ddd;
+    border: #ddd 1px solid;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin: 15px 0px 20px;
+    text-transform: uppercase;
+    transition: background .3s;
+}
+
+.btn-enviar:hover {
+    background: #bbb;
+}
+
+.msgMovie, .msgActor {
+    color: #c00;
+    display: inline-block;
+    /*padding: 8px 16px;
+    background: #c00;*/
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding-bottom: 10px;
+}
